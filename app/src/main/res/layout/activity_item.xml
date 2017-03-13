@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.vince.masterial_design_demo.MainActivity">
+    <!--AppBarLayout是垂直方向的linearLayout改造的-->
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        <!--@style/ThemeOverlay.AppCompat.Dark.ActionBar会让标题颜色变白色-->
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:expandedTitleMarginEnd="64dp"
+            app:expandedTitleMarginStart="48dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            android:fitsSystemWindows="true">
+            <!--scroll往下滚动时，toolbar会慢慢消失-->
+            <!--exitUntilCollapsed往下滚动时最多会收缩到actionbar的高度，不会全部不见！！！-->
+            <ImageView
+                android:src="@drawable/timg"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                app:layout_collapseMode="parallax"
+                android:fitsSystemWindows="true"/>
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/item_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"/>
+        </android.support.design.widget.CollapsingToolbarLayout>
+        <!--android:background="?attr/colorPrimary"-->
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <TextView
+            android:text="	清华大学（Tsinghua University），简称“清华”，由中华人民共和国教育部直属，中央直管副部级建制，位列“211工程”、“985工程”，入选”珠峰计划“、”2011计划“、”111计划“、”卓越工程师教育培养计划“、”卓越法律人才教育培养计划“、”卓越医生教育培养计划“，为九校联盟、东亚研究型大学协会、环太平洋大学联盟、清华大学—剑桥大学—麻省理工学院低碳能源大学联盟成员。
+	清华大学诞生于1911年，依托美国退还的部分“庚子赔款”建立，因北京西北郊的清华园而得名，初称“清华学堂”，是清政府设立的留美预备学校，翌年更名为“清华学校”；为尝试人才的本地培养，1925年设立大学部，1928年更名为“国立清华大学”；1937年抗日战争爆发后，学校南迁长沙，与北京大学、南开大学联合组建“国立长沙临时大学”；1938年迁至昆明，改名为“国立西南联合大学”；1946年迁回清华园，1952年成为一所多科性工业大学；改革开放以来，学校先后恢复或新建了理科、经济、管理和文科类学科，并成立了研究生院和继续教育学院。
+	清华大学是中国乃至亚洲最著名的高等学府之一，在长达百年的办学历史中，2位共和国主席、7位中央政治局常委、14名两弹一星获得者、600余名院士从这里走出，王国维、梁启超、陈寅恪、赵元任等一大批学术巨匠曾在此执教，恰如清华园工字殿内对联所书——“槛外山光，历春夏秋冬、万千变幻，都非凡境；窗中云影，任东西南北、去来澹荡，洵是仙居”"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            />
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>
