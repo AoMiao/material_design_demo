@@ -2,13 +2,23 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_call"
-            android:title="call"></item>
+            android:id="@+id/nav_me"
+            android:icon="@drawable/ic_account_circle_white_24dp"
+            android:title="我"></item>
 
         <item
-            android:title="call"></item>
+            android:id="@+id/nav_email"
+            android:icon="@drawable/ic_email_white_24dp"
+            android:title="邮箱"></item>
 
         <item
-            android:title="call"></item>
+            android:id="@+id/nav_blog"
+            android:icon="@drawable/ic_cloud_circle_white_24dp"
+            android:title="博客"></item>
+
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/ic_supervisor_account_white_24dp"
+            android:title="关于"></item>
     </group>
 </menu>
